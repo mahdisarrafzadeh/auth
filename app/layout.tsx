@@ -1,43 +1,34 @@
-import { Geist, Geist_Mono } from "next/font/google";
-
 import type { Metadata } from "next";
-import { AuthProvider } from "./context/AuthContext";
-import { ToastProvider } from "./context/ToastContext";
+import { Inter } from "next/font/google";
+
+import { AppProviders } from "./providers";
 import { ToastContainer } from "./components/ui/Toast";
 
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Authentication System",
-  description: "A simple authentication system with Next.js",
+  title: "Auth App",
+  description: "Authentication Application",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" dir="rtl">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ToastProvider>
-          <AuthProvider>
-            {children}
-            <ToastContainer />
-          </AuthProvider>
-        </ToastProvider>
+      <body className={`${inter.variable} antialiased`}>
+        <AppProviders>
+          {children}
+          <ToastContainer />
+        </AppProviders>
       </body>
     </html>
   );
