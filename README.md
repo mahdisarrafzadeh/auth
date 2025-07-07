@@ -58,21 +58,25 @@ auth/
 │   ├── api.json               # Sample API response
 │   ├── auth/                  # Auth page
 │   │   └── page.tsx
+|   ├── services/
+│   │   └──api/
+|   ├── providers/
 │   ├── components/            # Reusable components
-│   │   ├── Button/
-│   │   ├── Input/
+|   │   ├──ui
+│   │   │   ├── Button/
+│   │   │   ├── Input/
 │   │   ├── Login.tsx
 │   │   ├── LoginForm/
 │   │   └── Dashboard.tsx
-│   ├── constants/             # App constants
 │   ├── context/               # Authentication context
 │   ├── dashboard/             # Dashboard page
-│   │   └── page.tsx
-│   ├── hooks/                 # Custom hooks
+│   │   └── page.tsx           # Custom hooks
 │   ├── styles/                # Global styles
 │   │   ├── mixins.scss
 │   │   └── variables.scss
-│   └── types/                 # TypeScript types
+│   └── types/
+├── hooks/
+├── constants/                  # App constants
 ```
 
 ## Features
