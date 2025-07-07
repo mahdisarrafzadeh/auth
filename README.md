@@ -32,7 +32,7 @@ A simple authentication system with Next.js, TypeScript, and SCSS modules.
 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/mahdisarrafzadeh/auth.git
 cd auth
 ```
 
@@ -65,6 +65,7 @@ auth/
 |   │   ├──ui
 │   │   │   ├── Button/
 │   │   │   ├── Input/
+│   │   │   └── Tooltip/
 │   │   ├── Login.tsx
 │   │   ├── LoginForm/
 │   │   └── Dashboard.tsx
@@ -76,7 +77,7 @@ auth/
 │   │   └── variables.scss
 │   └── types/
 ├── hooks/
-├── constants/                  # App constants
+└── constants/                  # App constants
 ```
 
 ## Features
