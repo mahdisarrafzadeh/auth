@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, ReactNode } from "react";
 
-import { useAuth } from "../../hooks";
+import { useAuth } from "@/hooks";
 import { User } from "../types";
 
 interface AuthContextType {
