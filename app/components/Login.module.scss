@@ -1,0 +1,24 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.container {
+  @include flex-center;
+  min-height: 100vh;
+  width: 100%;
+  padding: $spacing-4;
+  background: linear-gradient(135deg, #f6f8fb 0%, #e5e9f2 100%);
+
+  .formWrapper {
+    @include card;
+    @include flex-column;
+    width: 100%;
+    max-width: 28rem;
+    align-items: center;
+
+    .toggleContainer {
+      margin-top: $spacing-8;
+      width: 100%;
+      max-width: 24rem;
+    }
+  }
+}

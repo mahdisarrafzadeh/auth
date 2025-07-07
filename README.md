@@ -1,24 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Authentication System
+
+A simple authentication system with Next.js, TypeScript, and SCSS modules.
+
+## Features
+
+- User login with phone number validation
+- Dashboard with user information
+- Two form implementations:
+  - Using Formik and Yup for validation
+  - Using custom React hooks for validation
+- Responsive design using SCSS modules
+- Authentication state management using Context API
+
+## Technologies Used
+
+- Next.js (App Router)
+- TypeScript
+- SCSS Modules with nesting support
+- Formik and Yup for form validation
+- React Context API for state management
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (version 18 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd auth
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+auth/
+├── app/
+│   ├── api.json               # Sample API response
+│   ├── auth/                  # Auth page
+│   │   └── page.tsx
+│   ├── components/            # Reusable components
+│   │   ├── Button/
+│   │   ├── Input/
+│   │   ├── Login.tsx
+│   │   ├── LoginForm/
+│   │   └── Dashboard.tsx
+│   ├── constants/             # App constants
+│   ├── context/               # Authentication context
+│   ├── dashboard/             # Dashboard page
+│   │   └── page.tsx
+│   ├── hooks/                 # Custom hooks
+│   ├── styles/                # Global styles
+│   │   ├── mixins.scss
+│   │   └── variables.scss
+│   └── types/                 # TypeScript types
+```
+
+## Features
+
+1. Auth Page:
+
+   - Input field for Iranian phone number with validation
+   - Login button that makes an API call to get user data
+   - Stores user data in localStorage
+   - Redirects to dashboard after successful login
+
+2. Dashboard Page:
+   - Shows a welcome message with user information
+   - Redirects to auth page if not logged in
+   - Logout button to clear session
+
+## Best Practices Used
+
+- Component-based architecture
+- Custom hooks for logic separation
+- Context API for global state management
+- Responsive design with rem units
+- Form validation with both libraries and custom code
+- Memory leak prevention with proper useEffect cleanup
+- Type safety with TypeScript
 
 ## Learn More
 

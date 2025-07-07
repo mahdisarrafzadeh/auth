@@ -1,0 +1,36 @@
+@import "./styles/mixins.scss";
+@import "./styles/variables.scss";
+
+.container {
+  @include flex-center;
+  min-height: 100vh;
+  padding: $spacing-6;
+  background-color: $bg-color-light;
+}
+
+.content {
+  @include flex-column;
+  @include card;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+
+  h1 {
+    @include heading-1;
+    color: $color-primary;
+    font-size: 5rem;
+    margin-bottom: $spacing-2;
+  }
+
+  h2 {
+    @include heading-2;
+    margin-bottom: $spacing-4;
+  }
+
+  p {
+    @include body-text;
+    color: $text-color-secondary;
+    margin-bottom: $spacing-6;
+  }
+}

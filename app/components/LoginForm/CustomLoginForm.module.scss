@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.formContainer {
+  @include flex-column;
+  width: 100%;
+  max-width: 24rem;
+
+  .title {
+    @include heading-2;
+    margin-bottom: $spacing-6;
+    text-align: center;
+    color: $gray-800;
+  }
+
+  .form {
+    @include flex-column;
+    gap: $spacing-4;
+    width: 100%;
+
+    .submitButton {
+      margin-top: $spacing-4;
+    }
+  }
+}

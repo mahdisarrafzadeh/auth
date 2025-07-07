@@ -1,0 +1,65 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.container {
+  @include flex-center;
+  min-height: 100vh;
+  width: 100%;
+  padding: $spacing-4;
+  background: linear-gradient(135deg, #f6f8fb 0%, #e5e9f2 100%);
+
+  .dashboardWrapper {
+    @include card;
+    @include flex-column;
+    width: 100%;
+    max-width: 36rem;
+    align-items: center;
+
+    .header {
+      @include flex-between;
+      width: 100%;
+      margin-bottom: $spacing-8;
+
+      .title {
+        @include heading-2;
+        color: $gray-800;
+        margin: 0;
+      }
+    }
+
+    .content {
+      @include flex-column;
+      width: 100%;
+      align-items: center;
+      gap: $spacing-6;
+
+      .userInfo {
+        @include flex-column;
+        align-items: center;
+        gap: $spacing-4;
+
+        .avatar {
+          border-radius: 50%;
+          overflow: hidden;
+          border: 2px solid $primary-color;
+        }
+
+        .name {
+          @include heading-2;
+          margin: 0;
+          text-align: center;
+        }
+
+        .email {
+          color: $gray-600;
+          margin: 0;
+        }
+      }
+    }
+
+    .logoutButton {
+      margin-top: $spacing-8;
+      max-width: 16rem;
+    }
+  }
+}

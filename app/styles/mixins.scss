@@ -1,0 +1,97 @@
+@import "variables";
+
+// Responsive mixins
+@mixin sm {
+  @media (min-width: #{$breakpoint-sm}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$breakpoint-lg}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$breakpoint-xl}) {
+    @content;
+  }
+}
+
+// Flexbox mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Typography mixins
+@mixin heading-1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+
+  @include md {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+@mixin heading-2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+
+  @include md {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@mixin body-text {
+  font-size: $font-size-base;
+  line-height: 1.5rem;
+
+  @include md {
+    font-size: $font-size-lg;
+    line-height: 1.75rem;
+  }
+}
+
+// Card styling
+@mixin card {
+  background-color: white;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  padding: $spacing-6;
+
+  @include md {
+    padding: $spacing-8;
+  }
+}
+
+// Transition
+@mixin transition-base {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
